@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content=
-    "application/xhtml+xml; charset=iso-8859-1" />
+    "application/xhtml+xml; charset=utf-8" />
     <title>
       LFS Target Architectures
     </title>
@@ -15,114 +15,82 @@
   <body class="lfs" id="lfs-7.4">
     <div class="navheader">
       <h4>
-        Linux From Scratch - Version 7.4
+        Linux From Scratch - 版本 7.4
       </h4>
       <h3>
-        Preface
+        序言
       </h3>
       <ul>
         <li class="prev">
-          <a accesskey="p" href="audience.html" title="Audience">Prev</a>
+          <a accesskey="p" href="audience.html" title="Audience">后退</a>
           <p>
-            Audience
+            目标读者
           </p>
         </li>
         <li class="next">
           <a accesskey="n" href="standards.html" title=
-          "LFS and Standards">Next</a>
+          "LFS and Standards">前进</a>
           <p>
-            LFS and Standards
+            LFS 及标准
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
     <div class="sect1" lang="en" xml:lang="en">
       <h1 class="sect1">
-        <a id="pre-architecture" name="pre-architecture"></a>iii. LFS Target
-        Architectures
+        <a id="pre-architecture" name="pre-architecture"></a>iii. LFS 目标架构
       </h1>
       <p>
-        The primary target architectures of LFS are the AMD/Intel x86
-        (32-bit) and x86_64 (64-bit) CPUs. On the other hand, the
-        instructions in this book are also known to work, with some
-        modifications, with the Power PC CPU. To build a system that utilizes
-        one of these CPUs, the main prerequisite, in addition to those on the
-        next few pages, is an existing Linux system such as an earlier LFS
-        installation, Ubuntu, Red Hat/Fedora, SuSE, or other distribution
-        that targets the architecture that you have. Also note that a 32-bit
-        distribution can be installed and used as a host system on a 64-bit
-        AMD/Intel computer.
+	LFS系统主要的目标架构是 AMD/Intel X86(32位) 和 x86_64(64位) CPU。换句话说，这本书中的命令在些许修改下，可以运行在Power PC CPU之上。为了构造适合这些CPU的系统，除了接下来几页以外，主要的先决条件是你要有一个相同的目标架构的Linux系统，比如以前安装的LFS, Ubuntu, Red Hat/Fedora, SuSE 或其他发行版。还要注意，32位的发行版可以安装并运行在64位 AMD/Intel 电脑上。
       </p>
       <p>
-        Some other facts about 64-bit systems need to be added here. When
-        compared to a 32-bit system, the sizes of executable programs are
-        slightly larger and the execution speeds are only slightly faster.
-        For example, in a test build of LFS-6.5 on a Core2Duo CPU based
-        system, the following statistics were measured:
+	一些关于64位系统的情况在这里。和32位系统对比，可执行程序的容量稍微大一些，而速度仅快一点。例如，在 Core2Duo CPU 上的 LFS-6.5 基础系统测试中，下面是统计结果：
       </p>
       <pre class="screen">
-<code class="computeroutput">Architecture Build Time     Build Size
-32-bit       198.5 minutes  648 MB
-64-bit       190.6 minutes  709 MB</code>
+<code class="computeroutput">目标架构构造时间         构造大小
+32位  198.5 分钟       648 MB
+64位  190.6 分钟       709 MB</code>
 </pre>
       <p>
-        As you can see, the 64-bit build is only 4% faster and is 9% larger
-        than the 32-bit build. The gain from going to a 64-bit system is
-        relatively minimal. Of course, if you have more than 4GB of RAM or
-        want to manipulate data that exceeds 4GB, the advantages of a 64-bit
-        system are substantial.
+	正如你所看到的，64位系统的构造比32位速度快4%，而体积却大了9%。使用64位系统的好处相对来说比较小。当然，如果你有超过4GB的内存或者你想要处理超过4GB的数据，那么64位系统的优点是很明显的。
       </p>
       <p>
-        The default 64-bit build that results from LFS is considered a "pure"
-        64-bit system. That is, it supports 64-bit executables only. Building
-        a "multi-lib" system requires compiling many applications twice, once
-        for a 32-bit system and once for a 64-bit system. This is not
-        directly supported in LFS because it would interfere with the
-        educational objective of providing the instructions needed for a
-        straightforward base Linux system. You can refer to the <a class=
-        "ulink" href="http://trac.cross-lfs.org/">Cross Linux From
-        Scratch</a> project for this advanced topic.
+	在默认情况下，LFS 构造的64位系统是“纯净的”64位系统。也就是说，它只支持64位可执行文件。 构建一个 “多库（multi-lib）” 系统，需要将很多应用软件编译两次，一次用于32位系统，一次用于64位系统。在LFS系统不直接支持，是因为它干扰了提供易用的基本Linux系统指南的教育目标。对于这个高级主题，你可以参考<a class="ulink" href="http://trac.cross-lfs.org/">Cross Linux From Scratch</a> 项目。
       </p>
       <p>
-        There is one last comment about 64-bit systems. There are some older
-        packages that cannot currently be built in a "pure" 64-bit system or
-        require specialized build instructions. Generally, these packages
-        have some embedded 32-bit specific assembly language instructions
-        that fail when building on a 64-bit system. This includes some Xorg
-        drivers for some legacy video cards at <a class="ulink" href=
-        "http://xorg.freedesktop.org/releases/individual/driver/">http://xorg.freedesktop.org/releases/individual/driver/</a>.
-        Many of these problems can be worked around, but may require some
-        specialized procedures or patches.
+这是关于64位系统的最后讨论。当前有一些软件包不能在“纯净的”64位系统中编译，或者专门的编译指南。通常，这些包有一些嵌入式32位特定汇编语言指令，它们在64位系统编译时会失败。这包括一些古老显卡的 Xorg 驱动，详情见： <a class="ulink" href=
+        "http://xorg.freedesktop.org/releases/individual/driver/">http://xorg.freedesktop.org/releases/individual/driver/</a>。
+其中很多问题可以被绕过， 但是可能需要专门的程序或补丁。
       </p>
     </div>
     <div class="navfooter">
       <ul>
         <li class="prev">
-          <a accesskey="p" href="audience.html" title="Audience">Prev</a>
+          <a accesskey="p" href="audience.html" title="Audience">后退</a>
           <p>
-            Audience
+            目标读者
           </p>
         </li>
         <li class="next">
           <a accesskey="n" href="standards.html" title=
-          "LFS and Standards">Next</a>
+          "LFS and Standards">前进</a>
           <p>
-            LFS and Standards
+            LFS 及标准
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
