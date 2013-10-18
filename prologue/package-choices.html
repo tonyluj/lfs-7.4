@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content=
-    "application/xhtml+xml; charset=iso-8859-1" />
+    "application/xhtml+xml; charset=utf-8" />
     <title>
-      Rationale for Packages in the Book
+      为何使用这本书选择的软件包
     </title>
     <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
     <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
@@ -15,48 +15,41 @@
   <body class="lfs" id="lfs-7.4">
     <div class="navheader">
       <h4>
-        Linux From Scratch - Version 7.4
+        Linux From Scratch - 版本 7.4
       </h4>
       <h3>
-        Preface
+        序言
       </h3>
       <ul>
         <li class="prev">
           <a accesskey="p" href="standards.html" title=
-          "LFS and Standards">Prev</a>
+          "LFS and Standards">后退</a>
           <p>
-            LFS and Standards
+            LFS 及标准
           </p>
         </li>
         <li class="next">
           <a accesskey="n" href="prerequisites.html" title=
-          "Prerequisites">Next</a>
+          "Prerequisites">前进</a>
           <p>
-            Prerequisites
+            先决条件
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
     <div class="sect1" lang="en" xml:lang="en">
       <h1 class="sect1">
-        <a id="pre-why" name="pre-why"></a>v. Rationale for Packages in the
-        Book
+        <a id="pre-why" name="pre-why"></a>v. 为何使用这本书选择的软件包
       </h1>
       <p>
-        As stated earlier, the goal of LFS is to build a complete and usable
-        foundation-level system. This includes all packages needed to
-        replicate itself while providing a relatively minimal base from which
-        to customize a more complete system based on the choices of the user.
-        This does not mean that LFS is the smallest system possible. Several
-        important packages are included that are not strictly required. The
-        lists below document the rationale for each package in the book.
+就像前面所说的，LFS 的目标是为了建立一个完整的，基础级的可用系统。这包括在提供一个相对较小的基础系统时，需要复制自己的全部软件包。从这个小基础系统开始，可以按照用户的选择定制一个更完整的系统。这并不意味着 LFS 是可能的最小系统。它包括一些重要担不是必需的软件包。下面列出了本书中每个文件包的理由：
       </p>
       <div class="itemizedlist">
         <ul>
@@ -65,10 +58,7 @@
               Autoconf
             </p>
             <p>
-              This package contains programs for producing shell scripts that
-              can automatically configure source code from a developer's
-              template. It is often needed to rebuild a package after updates
-              to the build procedures.
+此包包括生成能够从开发者模板自动配置源代码的shell脚本。它通常需要更新后重建一个软件包来构建程序。
             </p>
           </li>
           <li>
@@ -76,9 +66,7 @@
               Automake
             </p>
             <p>
-              This package contains programs for generating Make files from a
-              template. It is often needed to rebuild a package after updates
-              to the build procedures.
+此包包含从模板生成 Make 文件的程序。 它通常需要更新后重建一个软件包来构建程序。
             </p>
           </li>
           <li>
@@ -86,10 +74,7 @@
               Bash
             </p>
             <p>
-              This package satisfies an LSB core requirement to provide a
-              Bourne Shell interface to the system. It was chosen over other
-              shell packages because of its common usage and extensive
-              capabilities beyond basic shell functions.
+此包满足 LSB 核心需求，来为系统提供一个 Bourne Shell 接口。之所以选择它，而不是其他 shell 包，是因为除了具有基本的 shell 功能之外，它还具有通用性和广泛性。
             </p>
           </li>
           <li>
@@ -97,9 +82,7 @@
               Bc
             </p>
             <p>
-              This package provides an arbitrary precision numeric processing
-              language. It satisfies a requirement needed when building the
-              Linux kernel.
+此包提供了一个任意精度的数字处理语言。它满足了构建Linux内核的需求。
             </p>
           </li>
           <li>
@@ -107,10 +90,7 @@
               Binutils
             </p>
             <p>
-              This package contains a linker, an assembler, and other tools
-              for handling object files. The programs in this package are
-              needed to compile most of the packages in an LFS system and
-              beyond.
+此包包括一个链接器，一个编译器，和其他的处理目标文件的工具。在 LFS 系统中，编译绝大部分包都需要此包中的程序。
             </p>
           </li>
           <li>
@@ -118,8 +98,7 @@
               Bison
             </p>
             <p>
-              This package contains the GNU version of yacc (Yet Another
-              Compiler Compiler) needed to build several other LFS programs.
+此包包括构建一些其他LFS程序所需的yacc(Yet Another Compiler Compiler)的GUN版。
             </p>
           </li>
           <li>
@@ -127,9 +106,7 @@
               Bzip2
             </p>
             <p>
-              This package contains programs for compressing and
-              decompressing files. It is required to decompress many LFS
-              packages.
+此包包括压缩和解压所文件的程序。它被用来解压缩许多 LFS 软件包。
             </p>
           </li>
           <li>
@@ -137,8 +114,7 @@
               Check
             </p>
             <p>
-              This package contains a test harness for other programs. It is
-              only installed in the temporary toolchain.
+此包包括一个其他程序测试工具。它只在临时工具链中安装。
             </p>
           </li>
           <li>
@@ -146,10 +122,7 @@
               Coreutils
             </p>
             <p>
-              This package contains a number of essential programs for
-              viewing and manipulating files and directories. These programs
-              are needed for command line file management, and are necessary
-              for the installation procedures of every package in LFS.
+此包包括一些显示、操作文件和目录的必备程序。这些程序需要用来在命令行下的文件管理，以及在 LFS 下每个软件包的安装过程中。
             </p>
           </li>
           <li>
@@ -157,8 +130,7 @@
               DejaGNU
             </p>
             <p>
-              This package contains a framework for testing other programs.
-              It is only installed in the temporary toolchain.
+此包包括一个测试其他程序的框架。它只在临时工具链中安装。
             </p>
           </li>
           <li>
@@ -166,10 +138,7 @@
               Diffutils
             </p>
             <p>
-              This package contains programs that show the differences
-              between files or directories. These programs can be used to
-              create patches, and are also used in many packages' build
-              procedures.
+此包括显示文件间或目录间差异的程序。这些程序可以被用来创建补丁，也被许多包用在构建过程中。
             </p>
           </li>
           <li>
@@ -177,9 +146,7 @@
               E2fsprogs
             </p>
             <p>
-              This package contains the utilities for handling the ext2, ext3
-              and ext4 file systems. These are the most common and thoroughly
-              tested file systems that Linux supports.
+此包包括处理 ext2, ext3 还有 ex4 文件系统的实用工具。这些文件系统是Linux所支持的最普遍并经过彻底测试的文件系统。
             </p>
           </li>
           <li>
@@ -187,10 +154,7 @@
               Expect
             </p>
             <p>
-              This package contains a program for carrying out scripted
-              dialogues with other interactive programs. It is commonly used
-              for testing other packages. It is only installed in the
-              temporary toolchain.
+此包包含一个通过执行脚本对话框与其它交互式程序通信的工具。通常用于测试其他软件包。它只在临时工具链中安装。
             </p>
           </li>
           <li>
@@ -198,8 +162,7 @@
               File
             </p>
             <p>
-              This package contains a utility for determining the type of a
-              given file or files. A few packages need it to build.
+此包包括判断给定文件类型的实用工具。一些软件包在构建中需要此包。
             </p>
           </li>
           <li>
@@ -207,8 +170,7 @@
               Findutils
             </p>
             <p>
-              This package contains programs to find files in a file system.
-              It is used in many packages' build scripts.
+此包包括在文件系统中查找文件的程序。它被许多包用在构建脚本中。
             </p>
           </li>
           <li>
@@ -216,10 +178,7 @@
               Flex
             </p>
             <p>
-              This package contains a utility for generating programs that
-              recognize patterns in text. It is the GNU version of the lex
-              (lexical analyzer) program. It is required to build several LFS
-              packages.
+此包包含一个能生成识别文本模式的程序的工具。它是 GNU 版的 lex (词法分析器) 程序。它被用来编译一些 LFS 软件包。
             </p>
           </li>
           <li>
@@ -227,9 +186,7 @@
               Gawk
             </p>
             <p>
-              This package contains programs for manipulating text files. It
-              is the GNU version of awk (Aho-Weinberg-Kernighan). It is used
-              in many other packages' build scripts.
+此包包含处理文本文件的程序。它是 GNU 版的 awk (Aho-Weinberg-Kernighan)。它被许多其他的包用在构建脚本中。
             </p>
           </li>
           <li>
@@ -237,8 +194,7 @@
               Gcc
             </p>
             <p>
-              This package is the Gnu Compiler Collection. It contains the C
-              and C++ compilers as well as several others not built by LFS.
+此包包含 GNU 编译器集合。它包括 C 和 C++ 及一些没有被 LFS 编译的编译器。
             </p>
           </li>
           <li>
@@ -246,8 +202,7 @@
               GDBM
             </p>
             <p>
-              This package contains the GNU Database Manager library. It is
-              used by one other LFS package, Man-DB.
+此包包含 GNU 数据库管理器。它被另一个 LFS 软件包（ Man-DB）使用。
             </p>
           </li>
           <li>
@@ -255,8 +210,7 @@
               Gettext
             </p>
             <p>
-              This package contains utilities and libraries for
-              internationalization and localization of numerous packages.
+此包包含用于许多软件包的国际化和本地化的工具和库。
             </p>
           </li>
           <li>
@@ -264,8 +218,7 @@
               Glibc
             </p>
             <p>
-              This package contains the main C library. Linux programs would
-              not run without it.
+此包包含主要的 C 库。没有它 Linux 程序就不能运行。
             </p>
           </li>
           <li>
@@ -273,9 +226,7 @@
               GMP
             </p>
             <p>
-              This package contains math libraries that provide useful
-              functions for arbitrary precision arithmetic. It is required to
-              build Gcc.
+此包包含数学库，它们为任意精度计算提供了有用的函数。编译 Gcc 时需要它。
             </p>
           </li>
           <li>
@@ -283,8 +234,7 @@
               Grep
             </p>
             <p>
-              This package contains programs for searching through files.
-              These programs are used by most packages' build scripts.
+此包包含在文件中搜索的程序。这些程序被用在大部分的软件包构建脚本中。
             </p>
           </li>
           <li>
@@ -292,9 +242,7 @@
               Groff
             </p>
             <p>
-              This package contains programs for processing and formatting
-              text. One important function of these programs is to format man
-              pages.
+此包包含软件包包含几个处理和格式化文本的程序。这些程序的一个重要功能是格式化 man 手册页。
             </p>
           </li>
           <li>
@@ -302,8 +250,7 @@
               GRUB
             </p>
             <p>
-              This package is the Grand Unified Boot Loader. It is one of
-              several boot loaders available, but is the most flexible.
+此包是 完全统一引导装载程序（Grand Unified Boot Loader）。它是几个可用的引导装载程序之一，但它是最灵活的。
             </p>
           </li>
           <li>
@@ -311,9 +258,7 @@
               Gzip
             </p>
             <p>
-              This package contains programs for compressing and
-              decompressing files. It is needed to decompress many packages
-              in LFS and beyond.
+此包包括压缩和解压所文件的程序。它被用来解压缩许多 LFS 软件包。
             </p>
           </li>
           <li>
@@ -321,8 +266,7 @@
               Iana-etc
             </p>
             <p>
-              This package provides data for network services and protocols.
-              It is needed to enable proper networking capabilities.
+此包为网络服务和协议提供数据。它需要启用正确的网络功能。
             </p>
           </li>
           <li>
@@ -330,8 +274,7 @@
               Inetutils
             </p>
             <p>
-              This package contains programs for basic network
-              administration.
+此包包含基本的网络管理的程序。
             </p>
           </li>
           <li>
@@ -339,9 +282,7 @@
               IProute2
             </p>
             <p>
-              This package contains programs for basic and advanced IPv4 and
-              IPv6 networking. It was chosen over the other common network
-              tools package (net-tools) for its IPv6 capabilities.
+此包包含基本的和高级的基于IPv4 和 IPv6 网络的程序。选择它而不是其他通用的网络工具软件包（net-tools）是因为它的 IPv6 能力。
             </p>
           </li>
           <li>
@@ -349,8 +290,7 @@
               Kbd
             </p>
             <p>
-              This package contains key-table files, keyboard utilities for
-              non-US keyboards, and a number of console fonts.
+此包包含非美国键盘的键盘映射表和键盘工具，还有一些的控制台字体。
             </p>
           </li>
           <li>
@@ -358,8 +298,7 @@
               Kmod
             </p>
             <p>
-              This package contains programs needed to administer Linux
-              kernel modules.
+此包包括用来管理 Linux 内核模块的程序。
             </p>
           </li>
           <li>
@@ -367,9 +306,7 @@
               Less
             </p>
             <p>
-              This package contains a very nice text file viewer that allows
-              scrolling up or down when viewing a file. It is also used by
-              Man-DB for viewing manpages.
+此包包含一个很好用的文本文件查看器，在显示文件的内容时允许上下滚屏。它也被 Man-DB 用来显示 man 手册页。
             </p>
           </li>
           <li>
@@ -377,9 +314,7 @@
               Libpipeline
             </p>
             <p>
-              The Libpipeline package contains a library for manipulating
-              pipelines of subprocesses in a flexible and convenient way. It
-              is required by the Man-DB package.
+Libpipeline包包括一个灵活和方便的子线程操作管道的库。它被 Man-DB 包所需。
             </p>
           </li>
           <li>
@@ -387,10 +322,7 @@
               Libtool
             </p>
             <p>
-              This package contains the GNU generic library support script.
-              It wraps the complexity of using shared libraries in a
-              consistent, portable interface. It is needed by the test suites
-              in other LFS packages.
+此包包含 GNU 通用库支持脚本。它将使用共享库的复杂性封装到统一的，可移植的接口。在其他的 LFS 软件包测试工具中需要它。
             </p>
           </li>
           <li>
@@ -398,8 +330,7 @@
               Linux Kernel
             </p>
             <p>
-              This package is the Operating System. It is the Linux in the
-              GNU/Linux environment.
+此包是操作系统。它是 GNU/Linux 环境中的 Linux。
             </p>
           </li>
           <li>
@@ -407,8 +338,7 @@
               M4
             </p>
             <p>
-              This package contains a general text macro processor useful as
-              a build tool for other programs.
+此包包含一个通用的文本宏处理器，用于为其他程序编译工具。
             </p>
           </li>
           <li>
@@ -416,8 +346,7 @@
               Make
             </p>
             <p>
-              This package contains a program for directing the building of
-              packages. It is required by almost every package in LFS.
+此包包含一个直接编译软件包的程序。LFS 中几乎每个软件包都需要它。
             </p>
           </li>
           <li>
@@ -425,10 +354,7 @@
               Man-DB
             </p>
             <p>
-              This package contains programs for finding and viewing man
-              pages. It was chosen instead of the <span class=
-              "application">man</span> package due to superior
-              internationalization capabilities. It supplies the man program.
+此包包含查找和显示 man 手册页的程序。选择它代替 man 软件包是由于它卓越的国际化能力。它提供了 man 程序。
             </p>
           </li>
           <li>
@@ -436,8 +362,7 @@
               Man-pages
             </p>
             <p>
-              This package contains the actual contents of the basic Linux
-              man pages.
+此包包含基本的 Linux man 手册页的实际内容。
             </p>
           </li>
           <li>
@@ -445,8 +370,7 @@
               MPC
             </p>
             <p>
-              This package contains functions for the arithmetic of complex
-              numbers. It is required by Gcc.
+此包包括复数计算功能，Gcc需要它。
             </p>
           </li>
           <li>
@@ -454,8 +378,7 @@
               MPFR
             </p>
             <p>
-              This package contains functions for multiple precision
-              arithmetic. It is required by Gcc.
+此包包含用于多倍精度运算的函数，Gcc 需要它。
             </p>
           </li>
           <li>
@@ -463,10 +386,7 @@
               Ncurses
             </p>
             <p>
-              This package contains libraries for terminal-independent
-              handling of character screens. It is often used to provide
-              cursor control for a menuing system. It is needed by a number
-              of packages in LFS.
+此包包含字符终端处理库。它通常用于提供一个菜单系统的光标控制。LFS 中的一些软件包需要它。
             </p>
           </li>
           <li>
@@ -474,11 +394,7 @@
               Patch
             </p>
             <p>
-              This package contains a program for modifying or creating files
-              by applying a <span class="emphasis"><em>patch</em></span> file
-              typically created by the <span class="application">diff</span>
-              program. It is needed by the build procedure for several LFS
-              packages.
+此包包含一个根据补丁文件来修改或建立文件的程序，补丁文件通常是用 diff 程序创建的。一些 LFS 软件包的编译过程会需要它。
             </p>
           </li>
           <li>
@@ -486,9 +402,7 @@
               Perl
             </p>
             <p>
-              This package is an interpreter for the runtime language PERL.
-              It is needed for the installation and test suites of several
-              LFS packages.
+此包是运行时语言 PERL 的解释程序。在一些 LFS 软件包的安装和测试套件中需要它。
             </p>
           </li>
           <li>
@@ -496,8 +410,7 @@
               Pkg-config
             </p>
             <p>
-              This package provides a program to return meta-data about an
-              installed library or package.
+此包提供了返回一个安装的库或包的meta-data的程序。
             </p>
           </li>
           <li>
@@ -505,9 +418,7 @@
               Procps-NG
             </p>
             <p>
-              This package contains programs for monitoring processes. These
-              programs are useful for system administration, and are also
-              used by the LFS Bootscripts.
+此包包括监控进程的程序。这些程序对于系统管理员来说是有用的，他们也被用在 LFS 启动脚本中（Bootscripts）。
             </p>
           </li>
           <li>
@@ -515,9 +426,7 @@
               Psmisc
             </p>
             <p>
-              This package contains programs for displaying information about
-              running processes. These programs are useful for system
-              administration.
+此包包括显示运行进程信息的程序。这些程序对于系统管理员来说是有用的。
             </p>
           </li>
           <li>
@@ -525,8 +434,7 @@
               Readline
             </p>
             <p>
-              This package is a set of libraries that offers command-line
-              editing and history capabilities. It is used by Bash.
+此包是一个提供命令行编辑和历史纪录功能的库集合。它被 Bash 使用。
             </p>
           </li>
           <li>
@@ -534,9 +442,7 @@
               Sed
             </p>
             <p>
-              This package allows editing of text without opening it in a
-              text editor. It is also needed by most LFS packages' configure
-              scripts.
+此包允许在没有用编辑器打开的情况下编辑文本文件。大多数 LFS 软件包配置脚本也需要它。
             </p>
           </li>
           <li>
@@ -544,8 +450,7 @@
               Shadow
             </p>
             <p>
-              This package contains programs for handling passwords in a
-              secure way.
+此包包含在安全方式下处理密码的程序。
             </p>
           </li>
           <li>
@@ -553,9 +458,7 @@
               Sysklogd
             </p>
             <p>
-              This package contains programs for logging system messages,
-              such as those given by the kernel or daemon processes when
-              unusual events occur.
+此包包含记录系统日志的程序，比如内核或守护进程处理意外事务的日志。
             </p>
           </li>
           <li>
@@ -563,9 +466,7 @@
               Sysvinit
             </p>
             <p>
-              This package provides the <span class="application">init</span>
-              program, which is the parent of all other processes on the
-              Linux system.
+此包提供 init 程序，它是 Linux 系统上所有其他进程的父进程。
             </p>
           </li>
           <li>
@@ -573,8 +474,7 @@
               Tar
             </p>
             <p>
-              This package provides archiving and extraction capabilities of
-              virtually all packages used in LFS.
+此包为 LFS 中使用的几乎所有软件包提供归档和展开功能。
             </p>
           </li>
           <li>
@@ -582,9 +482,7 @@
               Tcl
             </p>
             <p>
-              This package contains the Tool Command Language used in many
-              test suites in LFS packages. It is only installed in the
-              temporary toolchain.
+此包包含 LFS 软件包中很多测试组件会用到的工具命令语言（Tool Command Language）。它仅在临时工具链中安装。
             </p>
           </li>
           <li>
@@ -592,9 +490,7 @@
               Texinfo
             </p>
             <p>
-              This package contains programs for reading, writing, and
-              converting info pages. It is used in the installation
-              procedures of many LFS packages.
+此包包含用于读取、写入、转换 Info 文档的程序。它用于很多 LFS 软件包的安装过程。
             </p>
           </li>
           <li>
@@ -602,9 +498,7 @@
               Udev
             </p>
             <p>
-              This package contains programs for dynamic creation of device
-              nodes. It is an alternative to creating thousands of static
-              devices in the /dev directory.
+此包包含用于动态建立设备节点的程序。它是在 /dev 目录下创建数以千计静态设备的一个替代品。
             </p>
           </li>
           <li>
@@ -612,9 +506,7 @@
               Util-linux
             </p>
             <p>
-              This package contains miscellaneous utility programs. Among
-              them are utilities for handling file systems, consoles,
-              partitions, and messages.
+此包包含很多工具程序。其中包括处理文件系统，控制台，分区和日志的工具。
             </p>
           </li>
           <li>
@@ -622,11 +514,7 @@
               Vim
             </p>
             <p>
-              This package contains an editor. It was chosen because of its
-              compatibility with the classic vi editor and its huge number of
-              powerful capabilities. An editor is a very personal choice for
-              many users and any other editor could be substituted if
-              desired.
+此包包含一个编辑器。之所以选择它，是因为它与经典的 vi 编辑器兼容，以及它大量强大的功能。对很多用户来说，编辑器是非常个性化的选择，如果需要，你可以将它替换成任何其他的编辑器。
             </p>
           </li>
           <li>
@@ -634,10 +522,7 @@
               XZ Utils
             </p>
             <p>
-              This package contains programs for compressing and
-              decompressing files. It provides the highest compression
-              generally available and is useful for decompressing packages XZ
-              or LZMA format.
+此包包括压缩和解压缩文件的程序。它提供了普遍适用的高压缩率，用来解压 XZ 包 或 LZMA 格式 也是有效的。
             </p>
           </li>
           <li>
@@ -645,8 +530,7 @@
               Zlib
             </p>
             <p>
-              This package contains compression and decompression routines
-              used by some programs.
+此包包括一些程序普遍使用的压缩和解压缩工具。
             </p>
           </li>
         </ul>
@@ -656,24 +540,24 @@
       <ul>
         <li class="prev">
           <a accesskey="p" href="standards.html" title=
-          "LFS and Standards">Prev</a>
+          "LFS and Standards">后退</a>
           <p>
-            LFS and Standards
+            LFS 及标准
           </p>
         </li>
         <li class="next">
           <a accesskey="n" href="prerequisites.html" title=
-          "Prerequisites">Next</a>
+          "Prerequisites">前进</a>
           <p>
-            Prerequisites
+            先决条件
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
