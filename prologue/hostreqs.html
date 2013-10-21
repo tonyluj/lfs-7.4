@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content=
-    "application/xhtml+xml; charset=iso-8859-1" />
+    "application/xhtml+xml; charset=utf-8" />
     <title>
-      Host System Requirements
+      对宿主系统的要求
     </title>
     <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
     <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
@@ -15,7 +15,7 @@
   <body class="lfs" id="lfs-7.4">
     <div class="navheader">
       <h4>
-        Linux From Scratch - Version 7.4
+        Linux From Scratch - 版本 7.4
       </h4>
       <h3>
         Preface
@@ -23,64 +23,56 @@
       <ul>
         <li class="prev">
           <a accesskey="p" href="prerequisites.html" title=
-          "Prerequisites">Prev</a>
+          "Prerequisites">后退</a>
           <p>
-            Prerequisites
+            先决条件
           </p>
         </li>
         <li class="next">
-          <a accesskey="n" href="typography.html" title="Typography">Next</a>
+          <a accesskey="n" href="typography.html" title="Typography">前进</a>
           <p>
-            Typography
+            排版约定
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
     <div class="sect1" lang="en" xml:lang="en">
       <h1 class="sect1">
-        <a id="pre-hostreqs" name="pre-hostreqs"></a>vii. Host System
-        Requirements
+        <a id="pre-hostreqs" name="pre-hostreqs"></a>vii. 对宿主系统的要求
       </h1>
       <p>
-        Your host system should have the following software with the minimum
-        versions indicated. This should not be an issue for most modern Linux
-        distributions. Also note that many distributions will place software
-        headers into separate packages, often in the form of
-        &ldquo;<span class="quote">&lt;package-name&gt;-devel</span>&rdquo;
-        or &ldquo;<span class="quote">&lt;package-name&gt;-dev</span>&rdquo;.
-        Be sure to install those if your distribution provides them.
+        你的宿主系统应该含有下列软件，并且不低于指出的版本。这对于现在的大多数 Linux 发布版都不是问题。 也要注意到，
+        很多发布版会把软件的头文件放在单独的包里，
+        经常命名为 “<package-name>-devel” 或 “<package-name>-dev”的样子。
+        如果你用的发布版提供了它们，一定要安装。
       </p>
       <p>
-        Earlier versions of the listed software packages may work, but has
-        not been tested.
+      下面列出软件包中，之前版本的软件包可能会正常工作，但是没有经过测试。
       </p>
       <div class="itemizedlist">
         <ul class="compact">
           <li>
             <p>
-              <span class="strong"><strong>Bash-3.2</strong></span> (/bin/sh
-              should be a symbolic or hard link to bash)
+              <span class="strong"><strong>Bash-3.2</strong></span> (/bin/sh 应该是 bash 的一个符号链接或硬链接)
             </p>
           </li>
           <li>
             <p>
               <span class="strong"><strong>Binutils-2.17</strong></span>
-              (Versions greater than 2.23.2 are not recommended as they have
-              not been tested)
+              (不推荐高于2.23.2的版本，因为没经过测试)
             </p>
           </li>
           <li>
             <p>
               <span class="strong"><strong>Bison-2.3</strong></span>
-              (/usr/bin/yacc should be a link to bison or small script that
-              executes bison)
+              (/usr/bin/yacc 应该是 bison 的一个连接或是执行 bison 的一个小脚本)
             </p>
           </li>
           <li>
@@ -106,22 +98,20 @@
           <li>
             <p>
               <span class="strong"><strong>Gawk-4.0.1</strong></span>
-              (/usr/bin/awk should be a link to gawk)
+              (/usr/bin/awk 是 gawk 的链接)
             </p>
           </li>
           <li>
             <p>
               <span class="strong"><strong>GCC-4.1.2</strong></span>
-              including the C++ compiler, <span class=
-              "command"><strong>g++</strong></span> (Versions greater than
-              4.8.1 are not recommended as they have not been tested)
+              包括 C++ 编译器， <span class=
+              "command"><strong>g++</strong></span> (不推荐高于4.8.1的版本，因为没经过测试)
             </p>
           </li>
           <li>
             <p>
               <span class="strong"><strong>Glibc-2.5.1</strong></span>
-              (Versions greater than 2.18 are not recommended as they have
-              not been tested)
+              (不推荐高于2.18的版本，因为没经过测试)
             </p>
           </li>
           <li>
@@ -140,24 +130,15 @@
               Kernel-2.6.32</strong></span>
             </p>
             <p>
-              The reason for the kernel version requirement is that we
-              specify that version when building <span class=
-              "application">glibc</span> in Chapter 6 at the recommendation
-              of the developers. It is also required by udev.
+            要求内核版本的原因是第六章创建 <span class="application">glibc</span> 时开发者推荐的。 udev 需要它。
             </p>
             <p>
-              If the host kernel is earlier than 2.6.32 you will need to
-              replace the kernel with a more up to date version. There are
-              two ways you can go about this. First, see if your Linux vendor
-              provides a 2.6.32 or later kernel package. If so, you may wish
-              to install it. If your vendor doesn't offer an acceptable
-              kernel package, or you would prefer not to install it, you can
-              compile a kernel yourself. Instructions for compiling the
-              kernel and configuring the boot loader (assuming the host uses
-              GRUB) are located in <a class="xref" href=
-              "../chapter08/chapter08.html" title=
-              "Chapter&nbsp;8.&nbsp;Making the LFS System Bootable">Chapter
-              8</a>.
+            如果宿主系统的内核版本早于2.6.32，你将需要将它替换成版本更新的内核。有两种方法可以：
+            第一，看看你的Linux提供商是否提供了2.6.32或版本更新的内核。如果是这样的话，你可能愿意安装它。
+            如果你的提供商没有提供一个合适的内核包，或者你不想安装它，你可以自己编译一个内核。关于内核编译和配置引导加载程序
+            （假设主机用的是GRUB）的介绍放在 
+            <a class="xref" href="../chapter08/chapter08.html" title="Chapter&nbsp;8.&nbsp;Making the LFS System Bootable">Chapter
+              8</a>。
             </p>
           </li>
           <li>
@@ -203,17 +184,12 @@
         </ul>
       </div>
       <p>
-        Note that the symlinks mentioned above are required to build an LFS
-        system using the instructions contained within this book. Symlinks
-        that point to other software (such as dash, mawk, etc.) may work, but
-        are not tested or supported by the LFS development team, and may
-        require either deviation from the instructions or additional patches
-        to some packages.
+      注意，上面提到的构建LFS系统要用到的符号链接的介绍包含在本书中。指向其他软件（如 dash 、 mawk 等）的符号链接可以运行，
+      但是没有被 LFS 开发团队所测试和支持，可能会偏离本指南或者需要为某些软件包打补丁。
       </p>
       <p>
-        <a id="version-check" name="version-check"></a>To see whether your
-        host system has all the appropriate versions, and the ability to
-        compile programs, run the following:
+        <a id="version-check" name="version-check"></a>要查看你的宿主系统是否包含所有的版本适当，
+        有编译程序能力的软件，请运行以下脚本：
       </p>
       <pre class="userinput">
 <kbd class="command">cat &gt; version-check.sh &lt;&lt; "EOF"
@@ -267,23 +243,23 @@ bash version-check.sh</kbd>
       <ul>
         <li class="prev">
           <a accesskey="p" href="prerequisites.html" title=
-          "Prerequisites">Prev</a>
+          "Prerequisites">后退</a>
           <p>
-            Prerequisites
+            先决条件
           </p>
         </li>
         <li class="next">
-          <a accesskey="n" href="typography.html" title="Typography">Next</a>
+          <a accesskey="n" href="typography.html" title="Typography">前进</a>
           <p>
-            Typography
+            排版约定
           </p>
         </li>
         <li class="up">
-          <a accesskey="u" href="preface.html" title="Preface">Up</a>
+          <a accesskey="u" href="preface.html" title="Preface">上一级</a>
         </li>
         <li class="home">
           <a accesskey="h" href="../index.html" title=
-          "Linux From Scratch - Version 7.4">Home</a>
+          "Linux From Scratch - Version 7.4">首页</a>
         </li>
       </ul>
     </div>
