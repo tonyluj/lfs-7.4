@@ -18,7 +18,7 @@
         Linux From Scratch - 版本 7.4
       </h4>
       <h3>
-        Preface
+        序言
       </h3>
       <ul>
         <li class="prev">
@@ -97,8 +97,7 @@ EOF</kbd>
 </pre>
       <p>
       这种样式用在创建配置文件时。第一个命令告诉系统建立 <code class=
-        "filename">$LFS/etc/group</code> 文件，
-      内容是接下来输入的每一行直到文件结束符（EOF）为止。因此，一般就是按看到的内容整段输入。
+        "filename">$LFS/etc/group</code> 文件，内容是接下来输入的每一行直到文件结束符（EOF）为止。因此，一般就是按看到的内容整段输入。
       </p>
       <p>
         <em class="replaceable"><code>&lt;替代文本&gt;</code></em>
@@ -116,18 +115,18 @@ EOF</kbd>
         <code class="filename">passwd(5)</code>
       </p>
       <p>
-      这种格式被用来指定特定的手册页 (以下简称“man”) 。参数里的数字指出man里的特定章节。
+      这种格式被用来指定特定的手册页 (以下简称“man”)。参数里的数字指出man里的特定章节。
       例如 <span class="command"><strong>passwd</strong></span> 有两个 man 页。
       按 LFS 安装手册，这两个 man 页将位于 <code class="filename">/usr/share/man/man1/passwd.1</code> 
       和 <code class="filename">/usr/share/man/man5/passwd.5</code> 中。
-      当书中用 <code class="filename">passwd(5)</code> 时， 是特指 
+      当书中用 <code class="filename">passwd(5)</code> 时，是特指 
       <code class="filename">/usr/share/man/man5/passwd.5</code> 。
       <span class="command"><strong>man passwd</strong></span> 将打印出所找到的第一个匹配 
       &ldquo;<span class="quote">passwd</span>&rdquo; 的 man 页，也就是 
       <code class="filename">/usr/share/man/man1/passwd.1</code> 在这个例子中，
       你需要运行 <span class="command"><strong>man 5 passwd</strong></span> 
       来指定想要的页。需要提醒的是，大部分 man 页不含有不同章节的多个页，
-      因此， <span class="command"><strong>man <em class="replaceable"><code>&lt;程序名&gt;</code></em></strong></span> 通常就足够了。
+      因此，<span class="command"><strong>man <em class="replaceable"><code>&lt;程序名&gt;</code></em></strong></span> 通常就足够了。
       </p>
     </div>
     <div class="navfooter">
